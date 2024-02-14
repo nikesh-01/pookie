@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="style.css">
+    <script src="function.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEB 14</title>
+</head>
+<body>
+    <div class="container">
+    <p>Will you be my valentine pookie🥰🥰</p>
+        <img src="main.png" alt="rock">
+        <a href="pookie.html">
+          
+        <button id="btn-1" type="submit">YES</button>
+        
+      </a>
+        <button id="moveButton" onclick="playSoundAndMove()">No</button>
+    </div>
+        <!-- Audio element -->
+        <audio id="sound" src="original sound - reverse.soundeffects_1707627555_musicaldown.com.mp3"></audio>
+      
+        <script>
+          function playSoundAndMove() {
+            // Get the button and audio elements
+            var button = document.getElementById("moveButton");
+            var sound = document.getElementById("sound");
+      
+            // Play the sound
+            sound.play();
+      
+            // Calculate new random position within the viewport
+            var newX = Math.random() * (window.innerWidth - button.offsetWidth);
+            var newY = Math.random() * (window.innerHeight - button.offsetHeight);
+      
+            // Set the new position
+            button.style.left = newX + "px";
+            button.style.top = newY + "px";
+          }
+        </script>
+        
+</body>
+</html>
